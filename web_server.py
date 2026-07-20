@@ -175,6 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   </div>
 
   <div class="info"><span id="gpio">—</span> | <span id="time">—</span></div>
+  <div class="info" style="margin-top:8px"><a href="https://github.com/arounyf/PWM-fan" target="_blank" style="color:#a78bfa;text-decoration:none;">github.com/arounyf/PWM-fan</a></div>
 </div>
 </body>
 </html>"""
