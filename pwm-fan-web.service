@@ -1,0 +1,13 @@
+[Unit]
+Description=PWM Fan Web Monitor
+After=pwm-fan.service
+Wants=pwm-fan.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/pwm-fan/web_server.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

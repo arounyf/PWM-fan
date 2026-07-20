@@ -1,0 +1,14 @@
+[Unit]
+Description=PWM Fan Driver
+After=sysinit.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/pwm-fan/fan_driver.py
+Restart=always
+RestartSec=10
+StartLimitBurst=10
+StartLimitIntervalSec=300
+
+[Install]
+WantedBy=multi-user.target
