@@ -69,6 +69,5 @@ curl http://127.0.0.1:8081
 | web_server.py | Web 监控控制页面 |
 | pwm-fan.service | 驱动 systemd 服务 |
 | pwm-fan-web.service | Web systemd 服务 |
-| test_gpio.py | GPIO 测试工具 |
 | install.sh | 一键安装脚本 (需 root) |
 | LICENSE | GPL v3 开源协议 |
