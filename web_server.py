@@ -74,7 +74,7 @@ async function refresh() {
     document.getElementById('duty-bar').style.width = d.duty + '%';
     document.getElementById('rpm').textContent = d.rpm > 0 ? d.rpm + ' RPM' : '—';
     document.getElementById('rpm-bar').style.width = d.rpm > 0 ? Math.min(100, (d.rpm / 3000) * 100) + '%' : '0%';
-    document.getElementById('gpio').textContent = 'GPIO ' + d.gpio_pin + ' @ ' + d.freq + 'Hz';
+    document.getElementById('gpio').textContent = 'PWM @ ' + d.freq + 'Hz';
     document.getElementById('time').textContent = new Date().toLocaleTimeString('zh-CN');
     // sync slider only if we haven't just manually changed it (2s debounce)
     let sl = document.getElementById('slider');
