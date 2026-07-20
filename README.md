@@ -1,6 +1,6 @@
 # PWM Fan Driver + Web Monitor
 
-基于 GPIO 软件 PWM 的风扇驱动，支持温度自控和 Web 手动调速。
+> 专为 **OEC-Turbo (RK3566)** 适配的 GPIO PWM 风扇驱动，支持温度自控和 Web 手动调速。
 
 ## 硬件接线
 
