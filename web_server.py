@@ -76,9 +76,15 @@ async function refresh() {
     document.getElementById('rpm-bar').style.width = d.rpm > 0 ? Math.min(100, (d.rpm / 3000) * 100) + '%' : '0%';
     document.getElementById('gpio').textContent = 'PWM @ ' + d.freq + 'Hz';
     document.getElementById('time').textContent = new Date().toLocaleTimeString('zh-CN');
-    // sync slider only if we haven't just manually changed it (2s debounce)
+    // sync control mode buttons to actual driver state (not just our local guess)
+    if (d.mode) {
+      mode = d.mode;
+      document.getElementById('btn-auto').classList.toggle('active', d.mode === 'auto');
+      document.getElementById('btn-manual').classList.toggle('active', d.mode === 'manual');
+    }
+    // sync slider to actual duty, unless user is dragging it right now (2s debounce)
     let sl = document.getElementById('slider');
-    if (mode === 'manual' && document.activeElement !== sl && Date.now() - dirty > 2000) {
+    if (document.activeElement !== sl && Date.now() - dirty > 2000) {
       sl.value = d.duty;
       document.getElementById('dutyVal').textContent = d.duty + '%';
     }
