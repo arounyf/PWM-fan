@@ -173,6 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
     <div class="btns">
       <button class="preset-btn" onclick="document.getElementById('slider').value=0;setDuty(0)">OFF</button>
+      <button class="preset-btn" onclick="document.getElementById('slider').value=15;setDuty(15)">15%</button>
       <button class="preset-btn" onclick="document.getElementById('slider').value=25;setDuty(25)">25%</button>
       <button class="preset-btn" onclick="document.getElementById('slider').value=50;setDuty(50)">50%</button>
       <button class="preset-btn" onclick="document.getElementById('slider').value=75;setDuty(75)">75%</button>
